@@ -2,6 +2,7 @@ Photon[] sunlight;
 void setup() {
   size(2000, 800);
   background(0);
+  ellipseMode(CENTER);
   sunlight = new Photon[300];
   for(int i = 0; i < sunlight.length; i++) {
     sunlight[i] = new Photon();
@@ -14,14 +15,14 @@ void draw() {
   fill(0, 0, 0, 200);
   stroke(253, 184, 19);
   strokeWeight(5);
-  circle(400, 400, 300);
+  ellipse(400, 400, 300, 300);
   for(int i = 0; i < sunlight.length; i++) {
     sunlight[i].show();
     sunlight[i].move();
   }
   fill(0, 0, 200);
   stroke(0);
-  circle(1800, 400, 50);
+  ellipse(1800, 400, 50, 50);
   fill(0, 200, 0);
   stroke(0, 200, 0);
   ellipse(1800, 390, 15, 20);
@@ -49,7 +50,7 @@ class Photon {
     fill(lightColor);
     stroke(lightColor);
     strokeWeight(1);
-    circle(myX, myY, 5);
+    ellipse(myX, myY, 5, 5);
   }
   void move() {
     distanceFromSun = Math.hypot(400 - myX, 400 - myY);
