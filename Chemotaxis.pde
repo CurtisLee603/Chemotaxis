@@ -1,4 +1,4 @@
- Photon[] sunlight;
+Photon[] sunlight;
 void setup() {
   size(2000, 800);
   background(0);
